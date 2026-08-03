@@ -7,9 +7,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="grid gap-4 sm:grid-cols-3">
+  <div class="grid gap-4 sm:grid-cols-3 lg:gap-3">
     <div v-for="feature in features" :key="feature.title" class="flex items-center gap-3">
-      <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/24 text-bone/86">
+      <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/24 text-bone/86 lg:h-10 lg:w-10">
         <svg v-if="feature.icon === 'shield'" class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 3 19 6v5c0 4.5-2.7 8-7 10-4.3-2-7-5.5-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.6" />
           <path d="m8.5 12 2.1 2.1 4.9-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
@@ -23,8 +23,8 @@ defineProps<{
         </svg>
       </div>
       <div>
-        <p class="text-sm font-semibold text-bone">{{ feature.title }}</p>
-        <p class="mt-1 text-sm text-white/45">{{ feature.description }}</p>
+        <p class="text-sm font-semibold text-bone lg:text-[0.82rem]">{{ feature.title }}</p>
+        <p class="mt-1 text-sm text-white/45 lg:text-[0.78rem]">{{ feature.description }}</p>
       </div>
     </div>
   </div>

@@ -33,7 +33,7 @@ useHead({
     <div aria-hidden="true" class="absolute left-[6%] top-[18%] h-80 w-80 rounded-full bg-[#E5E4E2]/[0.07] blur-3xl" />
     <div aria-hidden="true" class="absolute bottom-[7%] right-[18%] h-96 w-96 rounded-full bg-[#536878]/30 blur-3xl" />
 
-    <div class="relative z-[2] mx-auto flex min-h-screen w-full max-w-[1800px] flex-col px-5 py-6 sm:px-8 lg:h-screen lg:min-h-0 lg:px-16 lg:py-9">
+    <div class="relative z-[2] mx-auto flex min-h-screen w-full max-w-[1800px] flex-col px-5 py-6 sm:px-8 lg:h-screen lg:min-h-0 lg:px-16 lg:py-[clamp(1rem,2vh,1.5rem)]">
       <header class="flex items-center justify-between gap-6">
         <BrandMark />
         <div class="hidden items-center gap-6 sm:flex">
@@ -43,18 +43,18 @@ useHead({
         </div>
       </header>
 
-      <div class="grid flex-1 items-center gap-8 py-10 lg:grid-cols-[46fr_54fr] lg:gap-10 lg:py-8">
-        <section class="max-w-[43rem] space-y-8 lg:pt-8">
-          <div class="inline-flex items-center gap-3 rounded-2xl border border-[#E5E4E2]/[0.16] bg-[#E5E4E2]/[0.065] px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-sm">
+      <div class="grid flex-1 items-center gap-8 py-10 lg:grid-cols-[46fr_54fr] lg:gap-8 lg:py-[clamp(0.75rem,1.4vh,1.25rem)]">
+        <section class="max-w-[43rem] space-y-8 lg:space-y-[clamp(1rem,1.7vh,1.5rem)] lg:pt-[clamp(0.5rem,1.2vh,1rem)]">
+          <div class="inline-flex items-center gap-3 rounded-2xl border border-[#E5E4E2]/[0.16] bg-[#E5E4E2]/[0.065] px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-sm lg:px-4 lg:py-2.5">
             <span class="h-1.5 w-1.5 rounded-full bg-bone shadow-[0_0_14px_rgba(255,255,255,0.9)]" />
-            <p class="font-chakra text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-bone">{{ launchConfig.label }}</p>
+            <p class="font-chakra text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-bone lg:text-[0.7rem]">{{ launchConfig.label }}</p>
           </div>
 
-          <div class="space-y-5">
-            <h1 class="whitespace-pre-line font-display text-[clamp(4.5rem,8.8vw,8.8rem)] font-black uppercase leading-[0.78] tracking-[-0.095em] text-bone drop-shadow-[0_18px_40px_rgba(0,0,0,0.24)]">
+          <div class="space-y-5 lg:space-y-[clamp(0.75rem,1.3vh,1rem)]">
+            <h1 class="whitespace-pre-line font-display text-[clamp(4.5rem,8.8vw,8.8rem)] font-black uppercase leading-[0.78] tracking-[-0.095em] text-bone drop-shadow-[0_18px_40px_rgba(0,0,0,0.24)] lg:text-[clamp(3.9rem,7.5vw,7.5rem)]">
               {{ launchConfig.title }}
             </h1>
-            <p class="max-w-[38rem] text-xl leading-8 text-white/78 sm:text-2xl sm:leading-9">{{ launchConfig.subtitle }}</p>
+            <p class="max-w-[38rem] text-xl leading-8 text-white/78 sm:text-2xl sm:leading-9 lg:text-[clamp(1.05rem,1.45vw,1.35rem)] lg:leading-[1.38]">{{ launchConfig.subtitle }}</p>
           </div>
 
           <LaunchDate :eyebrow="launchConfig.eyebrow" :hijri-date="launchConfig.hijriDate" :gregorian-date="launchConfig.gregorianDate" />
@@ -63,7 +63,7 @@ useHead({
           <FeatureHighlights :features="launchConfig.features" />
         </section>
 
-        <section class="relative min-h-[520px] lg:min-h-[720px]">
+        <section class="relative min-h-[520px] lg:min-h-[620px]">
           <HeroSlider :slides="launchConfig.heroSlides" />
         </section>
       </div>

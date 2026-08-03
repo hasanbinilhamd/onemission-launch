@@ -37,8 +37,8 @@ function getSlideStyle(role: SlideRole) {
       return {
         left: '50%',
         top: '0',
-        width: 'min(40vw, 28rem)',
-        height: 'min(45rem, 100%)',
+        width: 'min(35vw, 24rem)',
+        height: 'min(38.5rem, 100%)',
         opacity: 1,
         zIndex: 30,
         transform: 'translate3d(-50%, 0, 0) scale(1)',
@@ -50,10 +50,10 @@ function getSlideStyle(role: SlideRole) {
       };
     case 'left':
       return {
-        left: 'calc(50% - min(20vw, 14rem) - min(7vw, 6.5rem) - 1rem)',
+        left: 'calc(50% - min(17.5vw, 12rem) - min(6vw, 5.5rem) - 1rem)',
         top: '12%',
-        width: 'min(14vw, 13rem)',
-        height: 'min(30rem, 68%)',
+        width: 'min(12vw, 11rem)',
+        height: 'min(25rem, 64%)',
         opacity: 0.74,
         zIndex: 10,
         transform: 'translate3d(-50%, 0, 0) scale(0.96)',
@@ -65,10 +65,10 @@ function getSlideStyle(role: SlideRole) {
       };
     case 'right':
       return {
-        left: 'calc(50% + min(20vw, 14rem) + min(7vw, 6.5rem) + 1rem)',
+        left: 'calc(50% + min(17.5vw, 12rem) + min(6vw, 5.5rem) + 1rem)',
         top: '12%',
-        width: 'min(14vw, 13rem)',
-        height: 'min(30rem, 68%)',
+        width: 'min(12vw, 11rem)',
+        height: 'min(25rem, 64%)',
         opacity: 0.74,
         zIndex: 10,
         transform: 'translate3d(-50%, 0, 0) scale(0.96)',
@@ -83,8 +83,8 @@ function getSlideStyle(role: SlideRole) {
       return {
         left: '50%',
         top: '16%',
-        width: '12rem',
-        height: '26rem',
+        width: '10rem',
+        height: '22rem',
         opacity: 0,
         zIndex: 1,
         transform: 'translate3d(-50%, 0, 0) scale(0.9)',
@@ -158,13 +158,13 @@ onBeforeUnmount(stopAutoplay);
 
 <template>
   <section
-    class="relative min-h-[520px] overflow-hidden lg:min-h-[720px]"
+    class="relative min-h-[520px] overflow-hidden lg:min-h-[620px]"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
     <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_48%_28%,rgba(229,228,226,0.14),transparent_21rem)]" />
 
-    <div class="relative z-[3] mx-auto h-[34rem] max-w-[46rem] sm:h-[39rem] lg:h-[45rem] lg:max-w-[56rem]">
+    <div class="relative z-[3] mx-auto h-[34rem] max-w-[46rem] sm:h-[39rem] lg:h-[38.5rem] lg:max-w-[49rem]">
       <div
         v-for="(slide, index) in slides"
         :key="slide.id"
@@ -176,7 +176,7 @@ onBeforeUnmount(stopAutoplay);
         <img
           :src="slide.image"
           :alt="slide.alt"
-          class="relative z-[2] h-full w-full object-contain p-8 opacity-90"
+          class="relative z-[2] h-full w-full object-contain p-8 opacity-90 lg:p-7"
           draggable="false"
           loading="eager"
         >
@@ -197,7 +197,7 @@ onBeforeUnmount(stopAutoplay);
         </div>
       </div>
 
-      <div class="pointer-events-none absolute bottom-7 left-1/2 z-[40] flex w-[min(72vw,28rem)] -translate-x-1/2 items-end justify-between gap-4 px-7 lg:w-[min(72vw,28rem)]">
+      <div class="pointer-events-none absolute bottom-7 left-1/2 z-[40] flex w-[min(72vw,28rem)] -translate-x-1/2 items-end justify-between gap-4 px-7 lg:bottom-6 lg:w-[min(35vw,24rem)] lg:px-6">
         <div>
           <p class="font-chakra text-sm font-semibold uppercase tracking-[0.12em] text-bone">{{ activeSlide.productName }}</p>
           <p class="mt-2 text-sm text-white/48">{{ activeSlide.color }}</p>
