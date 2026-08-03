@@ -126,7 +126,7 @@ const launchConfig: LaunchConfig = {
       color: 'Black',
       collectionLabel: 'Discipline In Motion',
       backgroundWord: 'Movement',
-      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/cowboy-running-hat.svg?updatedAt=1785488941928',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/3per4-legging.svg?updatedAt=1785488941923',
       alt: 'Black technical running shorts concept product',
     },
   ],
