@@ -22,7 +22,7 @@ function submit() {
 <template>
   <form class="space-y-3" @submit.prevent="submit">
     <p class="text-sm leading-6 text-white/72">{{ caption }}</p>
-    <div class="flex overflow-hidden rounded-2xl border border-white/[0.08] bg-black/24 p-1 shadow-[0_18px_50px_rgba(0,0,0,0.2)]">
+    <div class="flex overflow-hidden rounded-2xl border border-[#E5E4E2]/[0.16] bg-[#E5E4E2]/[0.075] p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_18px_46px_rgba(0,0,0,0.16)] backdrop-blur-sm">
       <input
         v-model="email"
         type="email"

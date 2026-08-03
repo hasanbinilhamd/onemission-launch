@@ -17,22 +17,23 @@ useHead({
     { name: 'twitter:title', content: launchConfig.seo.title },
     { name: 'twitter:description', content: launchConfig.seo.description },
     { name: 'twitter:image', content: launchConfig.seo.image },
-    { name: 'theme-color', content: '#080A0C' },
+    { name: 'theme-color', content: '#0A0A0A' },
   ],
   link: [
     { rel: 'canonical', href: launchConfig.canonicalUrl },
     { rel: 'preload', as: 'image', href: firstSlide.image, fetchpriority: 'high' },
+    { rel: 'preload', as: 'image', href: launchConfig.heroSlides[1]?.image || firstSlide.image },
   ],
 });
 </script>
 
 <template>
-  <main class="vignette relative min-h-screen overflow-hidden">
-    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_72%_48%,rgba(135,155,170,0.22),transparent_32rem),radial-gradient(circle_at_14%_72%,rgba(106,132,148,0.28),transparent_28rem),linear-gradient(135deg,#080a0c_0%,#0a1015_48%,#243542_100%)]" />
-    <div aria-hidden="true" class="absolute left-[6%] top-[18%] h-80 w-80 rounded-full bg-white/5 blur-3xl" />
-    <div aria-hidden="true" class="absolute bottom-[7%] right-[18%] h-96 w-96 rounded-full bg-[#8ca7b8]/16 blur-3xl" />
+  <main class="vignette relative min-h-screen overflow-hidden lg:h-screen lg:min-h-0">
+    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_70%_48%,rgba(83,104,120,0.42),transparent_34rem),radial-gradient(circle_at_16%_72%,rgba(83,104,120,0.30),transparent_30rem),radial-gradient(circle_at_52%_18%,rgba(229,228,226,0.075),transparent_30rem),linear-gradient(135deg,#0A0A0A_0%,#11191f_50%,#31424c_100%)]" />
+    <div aria-hidden="true" class="absolute left-[6%] top-[18%] h-80 w-80 rounded-full bg-[#E5E4E2]/[0.07] blur-3xl" />
+    <div aria-hidden="true" class="absolute bottom-[7%] right-[18%] h-96 w-96 rounded-full bg-[#536878]/30 blur-3xl" />
 
-    <div class="relative z-[2] mx-auto flex min-h-screen w-full max-w-[1800px] flex-col px-5 py-6 sm:px-8 lg:px-16 lg:py-9">
+    <div class="relative z-[2] mx-auto flex min-h-screen w-full max-w-[1800px] flex-col px-5 py-6 sm:px-8 lg:h-screen lg:min-h-0 lg:px-16 lg:py-9">
       <header class="flex items-center justify-between gap-6">
         <BrandMark />
         <div class="hidden items-center gap-6 sm:flex">
@@ -44,7 +45,7 @@ useHead({
 
       <div class="grid flex-1 items-center gap-8 py-10 lg:grid-cols-[46fr_54fr] lg:gap-10 lg:py-8">
         <section class="max-w-[43rem] space-y-8 lg:pt-8">
-          <div class="inline-flex items-center gap-3 rounded-2xl border border-white/[0.10] bg-black/12 px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-sm">
+          <div class="inline-flex items-center gap-3 rounded-2xl border border-[#E5E4E2]/[0.16] bg-[#E5E4E2]/[0.065] px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-sm">
             <span class="h-1.5 w-1.5 rounded-full bg-bone shadow-[0_0_14px_rgba(255,255,255,0.9)]" />
             <p class="font-chakra text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-bone">{{ launchConfig.label }}</p>
           </div>

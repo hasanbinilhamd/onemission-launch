@@ -27,7 +27,7 @@ function padValue(value: number) {
 
     <div v-else class="flex items-stretch gap-2 sm:gap-3">
       <template v-for="(unit, index) in units" :key="unit.label">
-        <div class="w-[5.9rem] rounded-xl border border-white/[0.07] bg-black/28 px-3 py-3 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] sm:w-[6.7rem] sm:py-4">
+        <div class="w-[5.9rem] rounded-xl border border-[#E5E4E2]/[0.16] bg-[#E5E4E2]/[0.075] px-3 py-3 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_14px_34px_rgba(0,0,0,0.14)] backdrop-blur-sm sm:w-[6.7rem] sm:py-4">
           <p class="font-display text-2xl font-medium leading-none tracking-[-0.04em] text-bone sm:text-3xl">
             {{ padValue(unit.value) }}
           </p>

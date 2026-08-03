@@ -19,17 +19,17 @@ const nextSlide = computed(() => props.slides[(activeIndex.value + 1) % props.sl
 
 <template>
   <section class="relative min-h-[520px] overflow-hidden lg:min-h-[720px]">
-    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_48%_28%,rgba(255,255,255,0.13),transparent_21rem)]" />
+    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_48%_28%,rgba(229,228,226,0.14),transparent_21rem)]" />
 
-    <div class="absolute left-0 top-[24%] z-[1] hidden h-[30rem] w-[16rem] overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.05] opacity-55 blur-[0.2px] lg:block">
-      <img :src="previousSlide.image" :alt="previousSlide.alt" class="h-full w-full object-contain p-8 opacity-65 blur-[1.5px]" loading="lazy">
+    <div class="absolute left-0 top-[24%] z-[1] hidden h-[30rem] w-[16rem] overflow-hidden rounded-2xl border border-[#E5E4E2]/[0.14] bg-[#E5E4E2]/[0.075] opacity-70 shadow-[0_20px_58px_rgba(0,0,0,0.20)] transition-opacity duration-500 lg:block">
+      <img :src="previousSlide.image" :alt="previousSlide.alt" class="h-full w-full object-contain p-8 opacity-78 blur-[0.45px] transition-opacity duration-500" loading="eager">
     </div>
-    <div class="absolute right-0 top-[24%] z-[1] hidden h-[30rem] w-[16rem] overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.05] opacity-55 blur-[0.2px] lg:block">
-      <img :src="nextSlide.image" :alt="nextSlide.alt" class="h-full w-full object-contain p-8 opacity-65 blur-[1.5px]" loading="lazy">
+    <div class="absolute right-0 top-[24%] z-[1] hidden h-[30rem] w-[16rem] overflow-hidden rounded-2xl border border-[#E5E4E2]/[0.14] bg-[#E5E4E2]/[0.075] opacity-70 shadow-[0_20px_58px_rgba(0,0,0,0.20)] transition-opacity duration-500 lg:block">
+      <img :src="nextSlide.image" :alt="nextSlide.alt" class="h-full w-full object-contain p-8 opacity-78 blur-[0.45px] transition-opacity duration-500" loading="eager">
     </div>
 
-    <div class="relative z-[3] mx-auto h-[34rem] max-w-[25rem] overflow-hidden rounded-[1.6rem] border border-white/[0.14] bg-gradient-to-b from-white/[0.12] to-white/[0.05] shadow-[0_34px_90px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(255,255,255,0.09)] backdrop-blur-sm sm:h-[39rem] sm:max-w-[28rem] lg:h-[45rem]">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.2),transparent_13rem),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(0,0,0,0.18))]" />
+    <div class="relative z-[3] mx-auto h-[34rem] max-w-[25rem] overflow-hidden rounded-[1.6rem] border border-[#E5E4E2]/[0.22] bg-gradient-to-b from-[#E5E4E2]/[0.18] via-[#536878]/[0.13] to-[#E5E4E2]/[0.07] shadow-[0_30px_78px_rgba(0,0,0,0.26),inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-sm sm:h-[39rem] sm:max-w-[28rem] lg:h-[45rem]">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(229,228,226,0.27),transparent_13rem),linear-gradient(180deg,rgba(229,228,226,0.10),rgba(10,10,10,0.10))]" />
       <Swiper
         class="relative z-[2] h-full"
         :modules="modules"
@@ -38,7 +38,7 @@ const nextSlide = computed(() => props.slides[(activeIndex.value + 1) % props.sl
         effect="fade"
         :speed="650"
         :allow-touch-move="false"
-        :autoplay="{ delay: 2800, disableOnInteraction: false }"
+        :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }"
         @slide-change="activeIndex = $event.realIndex"
       >
         <SwiperSlide v-for="(slide, index) in slides" :key="slide.id">
@@ -50,7 +50,7 @@ const nextSlide = computed(() => props.slides[(activeIndex.value + 1) % props.sl
               :fetchpriority="index === 0 ? 'high' : 'auto'"
               width="900"
               height="1100"
-              class="max-h-[78%] w-[76%] object-contain drop-shadow-[0_48px_60px_rgba(0,0,0,0.58)]"
+              class="max-h-[78%] w-[76%] object-contain drop-shadow-[0_42px_56px_rgba(0,0,0,0.46)]"
             >
           </div>
         </SwiperSlide>
