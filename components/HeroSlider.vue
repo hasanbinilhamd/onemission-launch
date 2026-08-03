@@ -28,9 +28,6 @@ const nextSlide = computed(() => props.slides[(activeIndex.value + 1) % props.sl
       <img :src="nextSlide.image" :alt="nextSlide.alt" class="h-full w-full object-contain p-8 opacity-65 blur-[1.5px]" loading="lazy">
     </div>
 
-    <div aria-hidden="true" class="absolute left-[1rem] top-1/2 z-[2] hidden -translate-y-1/2 text-4xl font-light text-bone/80 lg:block">←</div>
-    <div aria-hidden="true" class="absolute right-[1rem] top-1/2 z-[2] hidden -translate-y-1/2 text-4xl font-light text-bone/80 lg:block">→</div>
-
     <div class="relative z-[3] mx-auto h-[34rem] max-w-[25rem] overflow-hidden rounded-[1.6rem] border border-white/[0.14] bg-gradient-to-b from-white/[0.12] to-white/[0.05] shadow-[0_34px_90px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(255,255,255,0.09)] backdrop-blur-sm sm:h-[39rem] sm:max-w-[28rem] lg:h-[45rem]">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.2),transparent_13rem),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(0,0,0,0.18))]" />
       <Swiper

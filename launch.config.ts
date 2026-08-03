@@ -55,7 +55,7 @@ export interface LaunchConfig {
 const launchConfig: LaunchConfig = {
   launchDate: '2026-08-23T00:00:00+07:00',
   hijriDate: '1 Rabiul Awal 1448 H',
-  gregorianDate: '23 Agustus 2026',
+  gregorianDate: '14 Agustus 2026',
   label: 'LAUNCHING SOON',
   eyebrow: 'LAUNCHING ON',
   title: 'VALUES\nMATTER',
@@ -72,9 +72,9 @@ const launchConfig: LaunchConfig = {
     image: '/og-image.png',
   },
   social: [
-    { label: 'Instagram', href: 'https://instagram.com/onemissionclo', icon: 'instagram' },
-    { label: 'TikTok', href: 'https://www.tiktok.com/@onemissionclo', icon: 'tiktok' },
-    { label: 'YouTube', href: 'https://youtube.com/@onemissionclo', icon: 'youtube' },
+    { label: 'Instagram', href: 'https://www.instagram.com/onemissionclo/', icon: 'instagram' },
+    { label: 'TikTok', href: 'https://www.tiktok.com/@hasanbinilhamd', icon: 'tiktok' },
+    { label: 'YouTube', href: 'https://www.youtube.com/@onemissionworld', icon: 'youtube' },
   ],
   features: [
     { title: 'Aurat Friendly', description: 'Sesuai syariat', icon: 'shield' },
@@ -108,7 +108,7 @@ const launchConfig: LaunchConfig = {
       color: 'Black',
       collectionLabel: 'Values Performance Kit',
       backgroundWord: 'Values',
-      image: '/images/compression-legging.png',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/prosport-legging.svg?updatedAt=1785488941936',
       alt: 'Black performance legging front view',
     },
     {
@@ -117,7 +117,7 @@ const launchConfig: LaunchConfig = {
       color: 'Black',
       collectionLabel: 'Purpose Built Essentials',
       backgroundWord: 'Purpose',
-      image: '/images/running-tee.png',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/cowboy-running-hat.svg?updatedAt=1785488941928',
       alt: 'Minimal black running tee concept product',
     },
     {
@@ -126,7 +126,7 @@ const launchConfig: LaunchConfig = {
       color: 'Black',
       collectionLabel: 'Discipline In Motion',
       backgroundWord: 'Movement',
-      image: '/images/running-shorts.png',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/cowboy-running-hat.svg?updatedAt=1785488941928',
       alt: 'Black technical running shorts concept product',
     },
   ],
