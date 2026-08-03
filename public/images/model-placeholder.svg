@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 900" role="img" aria-label="Temporary product model placeholder">
+  <defs>
+    <linearGradient id="fabric" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#202327"/>
+      <stop offset="0.45" stop-color="#101317"/>
+      <stop offset="1" stop-color="#050607"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-35%" y="-20%" width="170%" height="150%">
+      <feDropShadow dx="0" dy="42" stdDeviation="30" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M164 98h192c17 0 31 14 31 31v56c0 20-16 36-36 36H169c-20 0-36-16-36-36v-56c0-17 14-31 31-31Z" fill="url(#fabric)"/>
+    <path d="M165 200h92c13 0 24 10 24 23l-37 579c-1 18-16 32-34 32h-73c-20 0-36-17-34-37l39-568c1-16 12-29 23-29Z" fill="url(#fabric)"/>
+    <path d="M263 200h92c11 0 22 13 23 29l39 568c2 20-14 37-34 37h-73c-18 0-33-14-34-32l-37-579c0-13 11-23 24-23Z" fill="url(#fabric)"/>
+    <path d="M142 117h236" stroke="#fff" stroke-opacity="0.12" stroke-width="3"/>
+    <path d="M257 220 218 802" stroke="#fff" stroke-opacity="0.08" stroke-width="3"/>
+    <path d="M263 220 302 802" stroke="#fff" stroke-opacity="0.08" stroke-width="3"/>
+    <path d="M134 106h252c0 0-20 67-126 67s-126-67-126-67Z" fill="url(#edge)" opacity="0.6"/>
+    <circle cx="260" cy="154" r="13" fill="none" stroke="#f5f5f5" stroke-opacity="0.75" stroke-width="3"/>
+    <path d="M260 137v34M243 154h34" stroke="#f5f5f5" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

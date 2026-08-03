@@ -1,79 +1,62 @@
 <script setup lang="ts">
-import launchConfig from '~/launch.config';
-
-const firstSlide = launchConfig.heroSlides[0];
-
 useHead({
-  title: launchConfig.seo.title,
+  title: 'ONEMISSION',
   meta: [
-    { name: 'description', content: launchConfig.seo.description },
     { name: 'robots', content: 'index, follow' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: launchConfig.seo.title },
-    { property: 'og:description', content: launchConfig.seo.description },
-    { property: 'og:url', content: launchConfig.canonicalUrl },
-    { property: 'og:image', content: launchConfig.seo.image },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: launchConfig.seo.title },
-    { name: 'twitter:description', content: launchConfig.seo.description },
-    { name: 'twitter:image', content: launchConfig.seo.image },
-    { name: 'theme-color', content: '#080A0C' },
+    { name: 'theme-color', content: '#06080A' },
   ],
   link: [
-    { rel: 'canonical', href: launchConfig.canonicalUrl },
-    { rel: 'preload', as: 'image', href: firstSlide.image, fetchpriority: 'high' },
+    { rel: 'preload', as: 'image', href: '/images/model-placeholder.svg', fetchpriority: 'high' },
   ],
 });
 </script>
 
 <template>
-  <main class="vignette relative min-h-screen overflow-hidden">
-    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_72%_48%,rgba(135,155,170,0.22),transparent_32rem),radial-gradient(circle_at_14%_72%,rgba(106,132,148,0.28),transparent_28rem),linear-gradient(135deg,#080a0c_0%,#0a1015_48%,#243542_100%)]" />
-    <div aria-hidden="true" class="absolute left-[6%] top-[18%] h-80 w-80 rounded-full bg-white/5 blur-3xl" />
-    <div aria-hidden="true" class="absolute bottom-[7%] right-[18%] h-96 w-96 rounded-full bg-[#8ca7b8]/16 blur-3xl" />
+  <main class="relative h-[100svh] min-h-[640px] overflow-hidden bg-[#06080a] text-white">
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 bg-[linear-gradient(180deg,#030405_0%,#06080a_28%,#0d1216_58%,#1d2a32_100%)]"
+    />
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 bg-[radial-gradient(circle_at_50%_72%,rgba(126,151,164,0.20),transparent_34rem),radial-gradient(circle_at_48%_18%,rgba(255,255,255,0.035),transparent_30rem)]"
+    />
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.24),transparent_38%,transparent_62%,rgba(0,0,0,0.18)),linear-gradient(180deg,rgba(0,0,0,0.32),transparent_34%,rgba(0,0,0,0.10))]"
+    />
 
-    <div class="relative z-[2] mx-auto flex min-h-screen w-full max-w-[1800px] flex-col px-5 py-6 sm:px-8 lg:px-16 lg:py-9">
-      <header class="flex items-center justify-between gap-6">
-        <BrandMark />
-        <div class="hidden items-center gap-6 sm:flex">
-          <p class="font-chakra text-[0.72rem] font-bold uppercase tracking-[0.26em] text-bone/82">{{ launchConfig.headerTagline }}</p>
-          <div class="h-6 w-px bg-white/18" />
-          <SocialLinks :links="launchConfig.social" compact />
-        </div>
-      </header>
-
-      <div class="grid flex-1 items-center gap-8 py-10 lg:grid-cols-[46fr_54fr] lg:gap-10 lg:py-8">
-        <section class="max-w-[43rem] space-y-8 lg:pt-8">
-          <div class="inline-flex items-center gap-3 rounded-2xl border border-white/[0.10] bg-black/12 px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-sm">
-            <span class="h-1.5 w-1.5 rounded-full bg-bone shadow-[0_0_14px_rgba(255,255,255,0.9)]" />
-            <p class="font-chakra text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-bone">{{ launchConfig.label }}</p>
-          </div>
-
-          <div class="space-y-5">
-            <h1 class="whitespace-pre-line font-display text-[clamp(4.5rem,8.8vw,8.8rem)] font-black uppercase leading-[0.78] tracking-[-0.095em] text-bone drop-shadow-[0_18px_40px_rgba(0,0,0,0.24)]">
-              {{ launchConfig.title }}
-            </h1>
-            <p class="max-w-[38rem] text-xl leading-8 text-white/78 sm:text-2xl sm:leading-9">{{ launchConfig.subtitle }}</p>
-          </div>
-
-          <LaunchDate :eyebrow="launchConfig.eyebrow" :hijri-date="launchConfig.hijriDate" :gregorian-date="launchConfig.gregorianDate" />
-          <Countdown :launch-date="launchConfig.launchDate" />
-          <NotifyForm :placeholder="launchConfig.notifyPlaceholder" :caption="launchConfig.notifyCaption" />
-          <FeatureHighlights :features="launchConfig.features" />
-        </section>
-
-        <section class="relative min-h-[520px] lg:min-h-[720px]">
-          <HeroSlider :slides="launchConfig.heroSlides" />
-        </section>
+    <header class="absolute left-6 top-6 z-30 sm:left-10 sm:top-8 lg:left-14">
+      <div class="inline-flex items-center gap-2 text-white" aria-label="ONEMISSION">
+        <svg class="h-7 w-7" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="8.5" stroke="currentColor" stroke-width="2" />
+          <path d="M16 3.5v7M16 21.5v7M3.5 16h7M21.5 16h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="m11.7 11.7 8.6 8.6M20.3 11.7l-8.6 8.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+        <span class="font-display text-xl font-black uppercase tracking-[-0.06em]">ONEMISSION</span>
       </div>
+    </header>
 
-      <div class="space-y-5">
-        <LaunchOfferStrip :offers="launchConfig.launchOffers" />
-        <div class="flex items-center justify-between gap-4 sm:hidden">
-          <SocialLinks :links="launchConfig.social" compact />
-          <a :href="`mailto:${launchConfig.contactEmail}`" class="text-xs text-white/40">{{ launchConfig.contactEmail }}</a>
-        </div>
-      </div>
+    <div class="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-4">
+      <p class="select-none text-center font-display text-[22vw] font-black uppercase leading-[0.78] tracking-[-0.12em] text-white/[0.14] sm:text-[18vw] lg:text-[14vw]">
+        Value<br>matters
+      </p>
+    </div>
+
+    <div class="relative z-20 grid h-full grid-cols-1 lg:grid-cols-2">
+      <section class="min-h-0" aria-hidden="true" />
+      <section class="min-h-0" aria-hidden="true" />
+    </div>
+
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center">
+      <img
+        src="/images/model-placeholder.svg"
+        alt=""
+        width="520"
+        height="900"
+        fetchpriority="high"
+        class="h-[60vh] max-h-[720px] min-h-[380px] w-auto object-contain opacity-90"
+      >
     </div>
   </main>
 </template>

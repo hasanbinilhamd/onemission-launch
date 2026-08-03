@@ -5,17 +5,21 @@
 :root {
   color-scheme: dark;
   --font-display: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
-  --font-label: 'Chakra Petch', ui-monospace, SFMono-Regular, monospace;
-  background: #080a0c;
+  background: #06080a;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
+html,
+body,
+#__nuxt {
   min-height: 100%;
-  background: #080a0c;
+}
+
+html {
+  background: #06080a;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,38 +27,9 @@ html {
 
 body {
   margin: 0;
-  min-height: 100%;
   font-family: var(--font-display);
-  background: #080a0c;
-  color: #f4efe7;
-}
-
-#__nuxt {
-  min-height: 100vh;
-}
-
-::selection {
-  background: rgba(198, 176, 138, 0.35);
-  color: #fff;
-}
-
-.glass-panel {
-  background: linear-gradient(135deg, rgba(255,255,255,0.105), rgba(255,255,255,0.035));
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 24px 60px rgba(0,0,0,0.24);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-.vignette::after {
-  content: '';
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at 50% 45%, transparent 0%, rgba(0,0,0,0.04) 42%, rgba(0,0,0,0.62) 100%),
-    linear-gradient(90deg, rgba(0,0,0,0.34), transparent 44%, rgba(0,0,0,0.18));
-  z-index: 1;
+  background: #06080a;
+  color: #f5f5f5;
 }
 
 button,
