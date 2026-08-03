@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   placeholder: string;
+  caption: string;
 }>();
 
 const email = ref('');
@@ -9,18 +10,19 @@ const message = ref('');
 function submit() {
   const normalized = email.value.trim();
   if (!normalized || !normalized.includes('@')) {
-    message.value = 'Please enter a valid email.';
+    message.value = 'Masukkan email yang valid.';
     return;
   }
 
-  message.value = 'You are on the mission list.';
+  message.value = 'Kamu masuk daftar pertama ONEMISSION.';
   email.value = '';
 }
 </script>
 
 <template>
   <form class="space-y-3" @submit.prevent="submit">
-    <div class="glass-panel flex overflow-hidden rounded-full p-1">
+    <p class="text-sm leading-6 text-white/72">{{ caption }}</p>
+    <div class="flex overflow-hidden rounded-2xl border border-white/[0.08] bg-black/24 p-1 shadow-[0_18px_50px_rgba(0,0,0,0.2)]">
       <input
         v-model="email"
         type="email"
@@ -31,11 +33,12 @@ function submit() {
       >
       <button
         type="submit"
-        class="rounded-full bg-bone px-5 py-3 font-chakra text-[0.68rem] font-bold uppercase tracking-[0.18em] text-charcoal transition duration-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-mutedgold/60"
+        class="inline-flex items-center gap-3 rounded-xl bg-bone px-4 py-3 font-chakra text-[0.62rem] font-bold uppercase tracking-[0.12em] text-charcoal transition duration-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-mutedgold/60 sm:px-5"
       >
-        Notify Me
+        Beritahu Saya
+        <span class="text-base leading-none">›</span>
       </button>
     </div>
-    <p v-if="message" class="px-2 text-xs text-white/54" role="status">{{ message }}</p>
+    <p v-if="message" class="px-2 text-xs text-white/60" role="status">{{ message }}</p>
   </form>
 </template>
