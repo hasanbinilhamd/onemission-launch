@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --font-display: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  --font-label: 'Chakra Petch', ui-monospace, SFMono-Regular, monospace;
+  background: #080a0c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #080a0c;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-display);
+  background:
+    radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.12), transparent 26rem),
+    radial-gradient(circle at 18% 78%, rgba(198, 176, 138, 0.12), transparent 24rem),
+    linear-gradient(135deg, #0d0f12 0%, #080a0c 46%, #121418 100%);
+  color: #f4efe7;
+}
+
+#__nuxt {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(198, 176, 138, 0.35);
+  color: #fff;
+}
+
+.glass-panel {
+  background: linear-gradient(135deg, rgba(255,255,255,0.105), rgba(255,255,255,0.035));
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 24px 60px rgba(0,0,0,0.24);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.vignette::after {
+  content: '';
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 45%, transparent 0%, rgba(0,0,0,0.08) 42%, rgba(0,0,0,0.58) 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.4), transparent 35%, rgba(0,0,0,0.22));
+  z-index: 1;
+}
+
+button,
+input {
+  font: inherit;
+}
