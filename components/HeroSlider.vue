@@ -176,7 +176,7 @@ onBeforeUnmount(stopAutoplay);
         <img
           :src="slide.image"
           :alt="slide.alt"
-          class="relative z-[2] h-full w-full object-contain p-8 opacity-90 lg:p-7"
+          class="relative z-[2] h-full w-full object-contain opacity-90"
           draggable="false"
           loading="eager"
         >
