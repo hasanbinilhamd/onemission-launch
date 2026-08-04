@@ -168,7 +168,7 @@ onBeforeUnmount(stopAutoplay);
       <div
         v-for="(slide, index) in slides"
         :key="slide.id"
-        class="absolute hidden overflow-hidden rounded-2xl border border-[#E5E4E2]/[0.14] bg-[#E5E4E2]/[0.075] shadow-[0_20px_58px_rgba(0,0,0,0.20)] backdrop-blur-sm will-change-transform lg:block"
+        class="absolute hidden overflow-hidden rounded-2xl  border-[#E5E4E2]/[0.14] bg-[#E5E4E2]/[0.075] shadow-[0_20px_58px_rgba(0,0,0,0.20)] backdrop-blur-sm will-change-transform lg:block"
         :style="getSlideStyle(getSlideRole(index))"
         aria-hidden="true"
       >
@@ -176,7 +176,7 @@ onBeforeUnmount(stopAutoplay);
         <img
           :src="slide.image"
           :alt="slide.alt"
-          class="relative z-[2] h-full w-full object-contain opacity-90"
+          class="relative z-[2] h-full w-full object-cover opacity-90"
           draggable="false"
           loading="eager"
         >

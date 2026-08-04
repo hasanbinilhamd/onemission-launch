@@ -109,7 +109,8 @@ const launchConfig: LaunchConfig = {
       color: 'Black',
       collectionLabel: 'Values Performance Kit',
       backgroundWord: 'Values',
-      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/prosport-legging.svg?updatedAt=1785488941936',
+      // image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/prosport-legging.svg?updatedAt=1785488941936',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Model/3%20per%204%20Basic/aszzz.JPG?updatedAt=1783405188937',
       alt: 'Black performance legging front view',
     },
     {
@@ -118,7 +119,8 @@ const launchConfig: LaunchConfig = {
       color: 'Black',
       collectionLabel: 'Purpose Built Essentials',
       backgroundWord: 'Purpose',
-      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/udel-off.svg?updatedAt=1785488941954',
+      // image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/udel-off.svg?updatedAt=1785488941954',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Model/Pro%20Sport/CES_PRO_SPORT_LEGGING.png?updatedAt=1785830667347',
       alt: 'Minimal black running tee concept product',
     },
     {
