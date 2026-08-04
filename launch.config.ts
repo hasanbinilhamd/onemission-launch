@@ -62,15 +62,9 @@ const launchConfig: LaunchConfig = {
   title: `so let's \nbring back\nthe value`,
   subtitle: 'Pakaian olahraga muslim pria yang dirancang untuk performa terbaik tanpa melupakan nilai.',
   description: 'Performance essentials designed with purpose. Engineered for movement. Launching soon.',
-<<<<<<< HEAD
   notifyCaption: 'Released in limited quantities. Make sure you\'re first to know.',
   notifyPlaceholder: 'Masukkan nomor wa kamu',
   contactEmail: 'onemissionid@gmail.com',
-=======
-  notifyCaption: 'Jadi yang pertama mendapatkan update dan penawaran eksklusif.',
-  notifyPlaceholder: 'Nomor WhatsApp',
-  contactEmail: 'hello@onemissionclo.com',
->>>>>>> 9b88b9de4000772810dc2707a9dd9150b5a09f55
   headerTagline: 'Valuse Matter',
   canonicalUrl: 'https://onemissionclo.com/',
   seo: {
