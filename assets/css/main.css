@@ -62,8 +62,8 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 45%, transparent 0%, rgba(10,10,10,0.02) 44%, rgba(10,10,10,0.42) 100%),
-    linear-gradient(90deg, rgba(10,10,10,0.20), transparent 46%, rgba(10,10,10,0.12));
+    radial-gradient(circle at 50% 48%, transparent 0%, rgba(10,10,10,0.015) 48%, rgba(10,10,10,0.34) 100%),
+    linear-gradient(90deg, rgba(10,10,10,0.14), transparent 48%, rgba(10,10,10,0.08));
   z-index: 1;
 }
 

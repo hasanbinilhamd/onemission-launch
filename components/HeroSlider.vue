@@ -162,8 +162,6 @@ onBeforeUnmount(stopAutoplay);
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
-    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_48%_28%,rgba(229,228,226,0.14),transparent_21rem)]" />
-
     <div class="relative z-[3] mx-auto h-[34rem] max-w-[46rem] sm:h-[39rem] lg:h-[38.5rem] lg:max-w-[49rem]">
       <div
         v-for="(slide, index) in slides"
