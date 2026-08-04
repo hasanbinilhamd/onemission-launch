@@ -4,18 +4,51 @@ defineProps<{
   caption: string;
 }>();
 
-const email = ref('');
+const runtimeConfig = useRuntimeConfig();
+const phone = ref('');
 const message = ref('');
+const isSubmitting = ref(false);
 
-function submit() {
-  const normalized = email.value.trim();
-  if (!normalized || !normalized.includes('@')) {
-    message.value = 'Masukkan email yang valid.';
+function isLikelyPhone(value: string) {
+  const compact = value.trim().replace(/[\s().-]/g, '');
+  return /^(?:\+?62|0)8\d{7,13}$/.test(compact);
+}
+
+async function submit() {
+  const normalized = phone.value.trim();
+  if (!isLikelyPhone(normalized)) {
+    message.value = 'Masukkan nomor WhatsApp yang valid.';
     return;
   }
 
-  message.value = 'Kamu masuk daftar pertama ONEMISSION.';
-  email.value = '';
+  isSubmitting.value = true;
+  message.value = '';
+
+  try {
+    const response = await fetch(runtimeConfig.public.launchSubscribeEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone: normalized }),
+    });
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      message.value = 'Masukkan nomor WhatsApp yang valid.';
+      return;
+    }
+
+    if (result?.duplicate) {
+      message.value = 'Nomor Anda sudah terdaftar.';
+      return;
+    }
+
+    phone.value = '';
+    message.value = 'Terima kasih! Kami akan menghubungi Anda saat OneMission resmi diluncurkan.';
+  } catch {
+    message.value = 'Gagal menghubungi server. Silakan coba lagi.';
+  } finally {
+    isSubmitting.value = false;
+  }
 }
 </script>
 
@@ -24,18 +57,24 @@ function submit() {
     <p class="text-sm leading-6 text-white/72 lg:text-[0.8rem] lg:leading-5">{{ caption }}</p>
     <div class="flex overflow-hidden rounded-2xl border border-[#E5E4E2]/[0.16] bg-[#E5E4E2]/[0.075] p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_18px_46px_rgba(0,0,0,0.16)] backdrop-blur-sm">
       <input
-        v-model="email"
-        type="email"
-        autocomplete="email"
+        v-model="phone"
+        type="tel"
+        inputmode="tel"
+        autocomplete="tel"
         :placeholder="placeholder"
-        aria-label="Email address"
+        aria-label="Nomor WhatsApp"
         class="min-w-0 flex-1 bg-transparent px-5 py-3 text-sm text-bone outline-none placeholder:text-white/34 lg:py-2.5 lg:text-[0.82rem]"
       >
       <button
         type="submit"
-        class="inline-flex items-center gap-3 rounded-xl bg-bone px-4 py-3 font-chakra text-[0.62rem] font-bold uppercase tracking-[0.12em] text-charcoal transition duration-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-mutedgold/60 sm:px-5 lg:py-2.5 lg:text-[0.56rem]"
+        :disabled="isSubmitting"
+        class="inline-flex items-center gap-3 rounded-xl bg-bone px-4 py-3 font-chakra text-[0.62rem] font-bold uppercase tracking-[0.12em] text-charcoal transition duration-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-mutedgold/60 disabled:cursor-not-allowed disabled:opacity-70 sm:px-5 lg:py-2.5 lg:text-[0.56rem]"
       >
+<<<<<<< HEAD
         Notify Me
+=======
+        {{ isSubmitting ? 'Mengirim...' : 'Beritahu Saya' }}
+>>>>>>> 9b88b9de4000772810dc2707a9dd9150b5a09f55
         <span class="text-base leading-none">›</span>
       </button>
     </div>

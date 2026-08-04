@@ -1,5 +1,10 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
+  runtimeConfig: {
+    public: {
+      launchSubscribeEndpoint: '/api/public/launch/subscribe',
+    },
+  },
   devtools: { enabled: false },
   ssr: true,
   typescript: {
