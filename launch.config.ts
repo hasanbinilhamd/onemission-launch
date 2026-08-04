@@ -62,9 +62,9 @@ const launchConfig: LaunchConfig = {
   title: `so let's \nbring back\nthe value`,
   subtitle: 'Pakaian olahraga muslim pria yang dirancang untuk performa terbaik tanpa melupakan nilai.',
   description: 'Performance essentials designed with purpose. Engineered for movement. Launching soon.',
-  notifyCaption: 'Jadi yang pertama mendapatkan update dan penawaran eksklusif.',
-  notifyPlaceholder: 'Masukkan email kamu',
-  contactEmail: 'hello@onemissionclo.com',
+  notifyCaption: 'Released in limited quantities. Make sure you\'re first to know.',
+  notifyPlaceholder: 'Masukkan nomor wa kamu',
+  contactEmail: 'onemissionid@gmail.com',
   headerTagline: 'Valuse Matter',
   canonicalUrl: 'https://onemissionclo.com/',
   seo: {
@@ -86,7 +86,7 @@ const launchConfig: LaunchConfig = {
     {
       title: 'Exclusive Launch Offer',
       description: 'Diskon spesial & gratis ongkir untuk pembelian pertama',
-      image: '/images/compression-legging.png',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Model/FARHAN_FIXhalf_.png?updatedAt=1785815275482',
       alt: 'Exclusive launch offer preview',
     },
     {
@@ -98,7 +98,7 @@ const launchConfig: LaunchConfig = {
     {
       title: 'Faith. Focus. Performance.',
       description: 'Lebih dari pakaian. Ini adalah pengingat tujuan.',
-      image: '/images/package-box.png',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Logos/LOGO_ONEMISSION_3D.png?updatedAt=1785488961848',
       alt: 'ONEMISSION package preview',
     },
   ],
