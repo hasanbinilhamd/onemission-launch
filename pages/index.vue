@@ -59,8 +59,8 @@ useHead({
 
           <LaunchDate :eyebrow="launchConfig.eyebrow" :hijri-date="launchConfig.hijriDate" :gregorian-date="launchConfig.gregorianDate" />
           <Countdown :launch-date="launchConfig.launchDate" />
-          <!-- <NotifyForm :placeholder="launchConfig.notifyPlaceholder" :caption="launchConfig.notifyCaption" />
-          <FeatureHighlights :features="launchConfig.features" /> -->
+          <NotifyForm :placeholder="launchConfig.notifyPlaceholder" :caption="launchConfig.notifyCaption" />
+          <!-- <FeatureHighlights :features="launchConfig.features" /> -->
         </section>
 
         <section class="relative min-h-[520px] lg:min-h-[620px]">
