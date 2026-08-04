@@ -28,10 +28,8 @@ useHead({
 </script>
 
 <template>
-  <main class="vignette relative min-h-screen overflow-hidden lg:h-screen lg:min-h-0">
-    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_70%_48%,rgba(83,104,120,0.42),transparent_34rem),radial-gradient(circle_at_16%_72%,rgba(83,104,120,0.30),transparent_30rem),radial-gradient(circle_at_52%_18%,rgba(229,228,226,0.075),transparent_30rem),linear-gradient(135deg,#0A0A0A_0%,#11191f_50%,#31424c_100%)]" />
-    <div aria-hidden="true" class="absolute left-[6%] top-[18%] h-80 w-80 rounded-full bg-[#E5E4E2]/[0.07] blur-3xl" />
-    <div aria-hidden="true" class="absolute bottom-[7%] right-[18%] h-96 w-96 rounded-full bg-[#536878]/30 blur-3xl" />
+  <main class="vignette relative min-h-screen overflow-hidden bg-[#0A0A0A] lg:h-screen lg:min-h-0">
+    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(ellipse_at_72%_46%,rgba(83,104,120,0.52)_0%,rgba(83,104,120,0.26)_28%,transparent_58%),radial-gradient(ellipse_at_18%_78%,rgba(83,104,120,0.34)_0%,rgba(83,104,120,0.16)_30%,transparent_62%),radial-gradient(ellipse_at_48%_18%,rgba(229,228,226,0.13)_0%,rgba(229,228,226,0.055)_26%,transparent_56%),linear-gradient(135deg,#0A0A0A_0%,#10171c_42%,#293943_72%,#536878_145%)]" />
 
     <div class="relative z-[2] mx-auto flex min-h-screen w-full max-w-[1800px] flex-col px-5 py-6 sm:px-8 lg:h-screen lg:min-h-0 lg:px-16 lg:py-[clamp(1rem,2vh,1.5rem)]">
       <header class="flex items-center justify-between gap-6">
