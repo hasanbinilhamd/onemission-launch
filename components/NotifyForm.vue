@@ -70,11 +70,7 @@ async function submit() {
         :disabled="isSubmitting"
         class="inline-flex items-center gap-3 rounded-xl bg-bone px-4 py-3 font-chakra text-[0.62rem] font-bold uppercase tracking-[0.12em] text-charcoal transition duration-300 hover:bg-white focus:outline-none focus:ring-2 focus:ring-mutedgold/60 disabled:cursor-not-allowed disabled:opacity-70 sm:px-5 lg:py-2.5 lg:text-[0.56rem]"
       >
-<<<<<<< HEAD
-        Notify Me
-=======
-        {{ isSubmitting ? 'Mengirim...' : 'Beritahu Saya' }}
->>>>>>> 9b88b9de4000772810dc2707a9dd9150b5a09f55
+        {{ isSubmitting ? 'Sent...' : 'Notify Me' }}
         <span class="text-base leading-none">›</span>
       </button>
     </div>
