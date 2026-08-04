@@ -39,18 +39,18 @@ function getSlideStyle(role: SlideRole) {
         top: '0',
         width: 'min(35vw, 24rem)',
         height: 'min(38.5rem, 100%)',
-        opacity: 1,
+        // opacity: 1,
         zIndex: 30,
         transform: 'translate3d(-50%, 0, 0) scale(1)',
         filter: 'blur(0px)',
-        background: 'linear-gradient(180deg, rgba(229,228,226,0.18), rgba(83,104,120,0.13) 46%, rgba(229,228,226,0.07) 100%)',
+        background: 'linear-gradient(180deg, rgba(229,228,226,0.80), rgba(83,104,120,0.60) 100%, rgba(229,228,226,0.60) 100%)',
         borderColor: 'rgba(229,228,226,0.22)',
         boxShadow: '0 30px 78px rgba(0,0,0,0.26), inset 0 1px 0 rgba(255,255,255,0.18)',
         transition: baseTransition,
       };
     case 'left':
       return {
-        left: 'calc(50% - min(17.5vw, 12rem) - min(6vw, 5.5rem) - 1rem)',
+        left: 'calc(50% - min(17.5vw, 12rem) - min(6vw, 5.5rem) + 1rem)',
         top: '12%',
         width: 'min(12vw, 11rem)',
         height: 'min(25rem, 64%)',
@@ -65,7 +65,7 @@ function getSlideStyle(role: SlideRole) {
       };
     case 'right':
       return {
-        left: 'calc(50% + min(17.5vw, 12rem) + min(6vw, 5.5rem) + 1rem)',
+        left: 'calc(50% + min(17.5vw, 12rem) + min(6vw, 5.5rem) - 1rem)',
         top: '12%',
         width: 'min(12vw, 11rem)',
         height: 'min(25rem, 64%)',

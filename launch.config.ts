@@ -53,18 +53,19 @@ export interface LaunchConfig {
 }
 
 const launchConfig: LaunchConfig = {
-  launchDate: '2026-08-23T00:00:00+07:00',
+  launchDate: '2026-08-14T00:00:00+07:00',
   hijriDate: '1 Rabiul Awal 1448 H',
   gregorianDate: '14 Agustus 2026',
   label: 'LAUNCHING SOON',
   eyebrow: 'LAUNCHING ON',
-  title: 'VALUES\nMATTER',
+  // title: 'VALUES\nMATTER',
+  title: `so let's \nbring back\nthe value`,
   subtitle: 'Pakaian olahraga muslim pria yang dirancang untuk performa terbaik tanpa melupakan nilai.',
   description: 'Performance essentials designed with purpose. Engineered for movement. Launching soon.',
   notifyCaption: 'Jadi yang pertama mendapatkan update dan penawaran eksklusif.',
   notifyPlaceholder: 'Masukkan email kamu',
   contactEmail: 'hello@onemissionclo.com',
-  headerTagline: 'BUILT FOR PURPOSE',
+  headerTagline: 'Valuse Matter',
   canonicalUrl: 'https://onemissionclo.com/',
   seo: {
     title: 'ONEMISSION — Values Matter',
@@ -104,7 +105,7 @@ const launchConfig: LaunchConfig = {
   heroSlides: [
     {
       id: 'performance-legging-front',
-      productName: 'Performance Legging',
+      productName: 'Prosport Legging',
       color: 'Black',
       collectionLabel: 'Values Performance Kit',
       backgroundWord: 'Values',
@@ -113,16 +114,16 @@ const launchConfig: LaunchConfig = {
     },
     {
       id: 'running-tee',
-      productName: 'Running Tee',
+      productName: 'Udel Off Legging',
       color: 'Black',
       collectionLabel: 'Purpose Built Essentials',
       backgroundWord: 'Purpose',
-      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/cowboy-running-hat.svg?updatedAt=1785488941928',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/udel-off.svg?updatedAt=1785488941954',
       alt: 'Minimal black running tee concept product',
     },
     {
       id: 'running-shorts',
-      productName: 'Running Shorts',
+      productName: 'Basic 3/4 Legging',
       color: 'Black',
       collectionLabel: 'Discipline In Motion',
       backgroundWord: 'Movement',
