@@ -13,13 +13,30 @@ const AUTOPLAY_DELAY = 3000;
 
 const activeIndex = ref(0);
 const isPaused = ref(false);
+const orderedSlides = shallowRef<HeroSlide[]>([]);
 const preloadedImages = new Set<string>();
 let autoplayTimer: ReturnType<typeof window.setInterval> | null = null;
 
-const activeSlide = computed(() => props.slides[activeIndex.value] ?? props.slides[0]);
+const carouselSlides = computed(() => (orderedSlides.value.length > 0 ? orderedSlides.value : props.slides));
+const activeSlide = computed(() => carouselSlides.value[activeIndex.value] ?? carouselSlides.value[0]);
+
+function shuffleSlides(slides: readonly HeroSlide[]) {
+  const shuffled = [...slides];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
+function initializeSlideOrder() {
+  if (orderedSlides.value.length > 0) return;
+  orderedSlides.value = shuffleSlides(props.slides);
+  activeIndex.value = 0;
+}
 
 function getSlideRole(index: number): SlideRole {
-  const total = props.slides.length;
+  const total = carouselSlides.value.length;
   if (total <= 1) return index === activeIndex.value ? 'center' : 'back';
 
   const relativeIndex = (index - activeIndex.value + total) % total;
@@ -107,8 +124,8 @@ function preloadImage(src: string) {
 }
 
 function preloadVisibleImages() {
-  if (props.slides.length === 0) return;
-  const total = props.slides.length;
+  if (carouselSlides.value.length === 0) return;
+  const total = carouselSlides.value.length;
   const indexes = new Set([
     activeIndex.value,
     (activeIndex.value + 1) % total,
@@ -116,18 +133,18 @@ function preloadVisibleImages() {
   ]);
 
   indexes.forEach((index) => {
-    const slide = props.slides[index];
+    const slide = carouselSlides.value[index];
     if (slide?.image) preloadImage(slide.image);
   });
 }
 
 function goToNextSlide() {
-  if (props.slides.length <= 1 || isPaused.value) return;
-  activeIndex.value = (activeIndex.value + 1) % props.slides.length;
+  if (carouselSlides.value.length <= 1 || isPaused.value) return;
+  activeIndex.value = (activeIndex.value + 1) % carouselSlides.value.length;
 }
 
 function startAutoplay() {
-  if (typeof window === 'undefined' || autoplayTimer || props.slides.length <= 1) return;
+  if (typeof window === 'undefined' || autoplayTimer || carouselSlides.value.length <= 1) return;
   autoplayTimer = window.setInterval(goToNextSlide, AUTOPLAY_DELAY);
 }
 
@@ -146,12 +163,9 @@ function handleMouseLeave() {
 }
 
 watch(activeIndex, preloadVisibleImages);
-watch(() => props.slides, () => {
-  activeIndex.value = 0;
-  preloadVisibleImages();
-}, { deep: false });
 
 onMounted(() => {
+  initializeSlideOrder();
   preloadVisibleImages();
   startAutoplay();
 });
@@ -185,7 +199,7 @@ onBeforeUnmount(stopAutoplay);
     /> -->
     <div class="relative z-[3] mx-auto h-[34rem] max-w-[46rem] sm:h-[39rem] lg:h-[38.5rem] lg:max-w-[49rem]">
       <div
-        v-for="(slide, index) in slides"
+        v-for="(slide, index) in carouselSlides"
         :key="slide.id"
         class="absolute hidden overflow-hidden rounded-2xl border-[#E5E4E2]/[0.14] bg-[#E5E4E2]/[0.075] shadow-[0_20px_58px_rgba(0,0,0,0.20)] backdrop-blur-sm will-change-transform lg:block"
         :style="getSlideStyle(getSlideRole(index))"
@@ -197,6 +211,7 @@ onBeforeUnmount(stopAutoplay);
         linear-gradient(180deg,rgba(255,255,255,0.09),rgba(83,104,120,0.05),rgba(10,10,10,0.04))]"
         />
         <img
+          v-if="getSlideRole(index) !== 'back'"
           :src="slide.image"
           :alt="slide.alt"
           class="relative z-[2] h-full w-full object-contain opacity-90"
@@ -226,9 +241,9 @@ onBeforeUnmount(stopAutoplay);
           <p class="mt-2 text-sm text-white/48">{{ activeSlide.color }}</p>
         </div>
         <div class="text-right">
-          <p class="font-display text-lg tracking-[0.12em] text-bone/90">{{ String(activeIndex + 1).padStart(2, '0') }} / {{ String(slides.length).padStart(2, '0') }}</p>
+          <p class="font-display text-lg tracking-[0.12em] text-bone/90">{{ String(activeIndex + 1).padStart(2, '0') }} / {{ String(carouselSlides.length).padStart(2, '0') }}</p>
           <div class="mt-3 flex justify-end gap-1">
-            <span v-for="slide in slides" :key="slide.id" class="h-px w-7 bg-white/25" :class="slide.id === activeSlide.id ? 'bg-bone' : ''" />
+            <span v-for="slide in carouselSlides" :key="slide.id" class="h-px w-7 bg-white/25" :class="slide.id === activeSlide.id ? 'bg-bone' : ''" />
           </div>
         </div>
       </div>
