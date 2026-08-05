@@ -45,7 +45,8 @@ function getSlideStyle(role: SlideRole) {
         filter: 'blur(0px)',
         background: 'linear-gradient(180deg, rgba(229,228,226,0.80), rgba(83,104,120,0.60) 100%, rgba(229,228,226,0.60) 100%)',
         borderColor: 'rgba(229,228,226,0.22)',
-        boxShadow: '0 30px 78px rgba(0,0,0,0.26), inset 0 1px 0 rgba(255,255,255,0.18)',
+        // boxShadow: '0 30px 78px rgba(0,0,0,0.26), inset 0 1px 0 rgba(255,255,255,0.18)',
+        boxShadow:'0 18px 46px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.18)',
         transition: baseTransition,
       };
     case 'left':
@@ -60,7 +61,8 @@ function getSlideStyle(role: SlideRole) {
         filter: 'blur(0.45px)',
         background: 'rgba(229,228,226,0.075)',
         borderColor: 'rgba(229,228,226,0.14)',
-        boxShadow: '0 20px 58px rgba(0,0,0,0.20)',
+        // boxShadow: '0 20px 58px rgba(0,0,0,0.20)',
+        boxShadow:'0 12px 34px rgba(0,0,0,.14)',
         transition: baseTransition,
       };
     case 'right':
@@ -75,7 +77,8 @@ function getSlideStyle(role: SlideRole) {
         filter: 'blur(0.45px)',
         background: 'rgba(229,228,226,0.075)',
         borderColor: 'rgba(229,228,226,0.14)',
-        boxShadow: '0 20px 58px rgba(0,0,0,0.20)',
+        // boxShadow: '0 20px 58px rgba(0,0,0,0.20)',
+        boxShadow:'0 12px 34px rgba(0,0,0,.14)',
         transition: baseTransition,
       };
     case 'back':
@@ -162,34 +165,56 @@ onBeforeUnmount(stopAutoplay);
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
+    <!-- <div
+      aria-hidden="true"
+      class="absolute inset-0 bg-[radial-gradient(circle_at_48%_28%,rgba(229,228,226,0.14),transparent_21rem)]"
+    /> -->
+
+    <!-- <div
+      aria-hidden="true"
+      class="absolute left-1/2 top-1/2 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full"
+      style="
+        background:
+          radial-gradient(circle,
+          rgba(83,104,120,.22) 0%,
+          rgba(83,104,120,.10) 38%,
+          rgba(229,228,226,.04) 58%,
+          transparent 78%);
+        filter: blur(80px);
+      "
+    /> -->
     <div class="relative z-[3] mx-auto h-[34rem] max-w-[46rem] sm:h-[39rem] lg:h-[38.5rem] lg:max-w-[49rem]">
       <div
         v-for="(slide, index) in slides"
         :key="slide.id"
-        class="absolute hidden overflow-hidden rounded-2xl  border-[#E5E4E2]/[0.14] bg-[#E5E4E2]/[0.075] shadow-[0_20px_58px_rgba(0,0,0,0.20)] backdrop-blur-sm will-change-transform lg:block"
+        class="absolute hidden overflow-hidden rounded-2xl border-[#E5E4E2]/[0.14] bg-[#E5E4E2]/[0.075] shadow-[0_20px_58px_rgba(0,0,0,0.20)] backdrop-blur-sm will-change-transform lg:block"
         :style="getSlideStyle(getSlideRole(index))"
         aria-hidden="true"
       >
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(229,228,226,0.18),transparent_11rem),linear-gradient(180deg,rgba(229,228,226,0.08),rgba(10,10,10,0.08))]" />
+        <div
+        class="absolute inset-0
+        bg-[radial-gradient(circle_at_50%_15%,rgba(229,228,226,0.22),transparent_12rem),
+        linear-gradient(180deg,rgba(255,255,255,0.09),rgba(83,104,120,0.05),rgba(10,10,10,0.04))]"
+        />
         <img
           :src="slide.image"
           :alt="slide.alt"
-          class="relative z-[2] h-full w-full object-cover opacity-90"
+          class="relative z-[2] h-full w-full object-contain opacity-90"
           draggable="false"
           loading="eager"
         >
       </div>
 
-      <div class="relative z-[30] h-full w-full lg:hidden">
-        <div class="relative mx-auto h-full max-w-[25rem] overflow-hidden rounded-[1.6rem] border border-[#E5E4E2]/[0.22] bg-gradient-to-b from-[#E5E4E2]/[0.18] via-[#536878]/[0.13] to-[#E5E4E2]/[0.07] shadow-[0_30px_78px_rgba(0,0,0,0.26),inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-sm sm:max-w-[28rem]">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(229,228,226,0.27),transparent_13rem),linear-gradient(180deg,rgba(229,228,226,0.10),rgba(10,10,10,0.10))]" />
+      <div class="relative z-[30] h-full w-full lg:hidden rounded-[1.6rem]">
+        <div class="relative mx-auto h-full max-w-[25rem] overflow-hidden rounded-[1.6rem] bg-transparent sm:max-w-[28rem] px-10 pb-12 pt-6">
+          <div class="absolute inset-0" />
           <img
             :src="activeSlide.image"
             :alt="activeSlide.alt"
             width="900"
             height="1100"
             fetchpriority="high"
-            class="relative z-[2] h-full w-full object-contain px-8 pb-28 pt-10 drop-shadow-[0_42px_56px_rgba(0,0,0,0.46)]"
+            class="relative z-[2] h-full w-full drop-shadow-[0_42px_56px_rgba(0,0,0,0.46)] object-cover"
             draggable="false"
           >
         </div>
