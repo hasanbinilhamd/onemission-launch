@@ -89,18 +89,6 @@ const launchConfig: LaunchConfig = {
       image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Model/FARHAN_FIXhalf_.png?updatedAt=1785815275482',
       alt: 'Exclusive launch offer preview',
     },
-    {
-      title: 'Limited Drop',
-      description: 'Koleksi perdana dalam jumlah terbatas',
-      image: '/images/fabric-texture.png',
-      alt: 'Limited fabric texture preview',
-    },
-    {
-      title: 'Faith. Focus. Performance.',
-      description: 'Lebih dari pakaian. Ini adalah pengingat tujuan.',
-      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Logos/LOGO_ONEMISSION_3D.png?updatedAt=1785488961848',
-      alt: 'ONEMISSION package preview',
-    },
   ],
   heroSlides: [
     {

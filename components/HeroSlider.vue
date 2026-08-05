@@ -220,7 +220,7 @@ onBeforeUnmount(stopAutoplay);
         </div>
       </div>
 
-      <div class="pointer-events-none absolute bottom-7 left-1/2 z-[40] flex w-[min(72vw,28rem)] -translate-x-1/2 items-end justify-between gap-4 px-7 lg:bottom-6 lg:w-[min(35vw,24rem)] lg:px-6">
+      <div class="pointer-events-none absolute bottom-7 left-1/2 z-[40] flex w-[min(72vw,28rem)] -translate-x-1/2 items-end justify-between gap-4 lg:bottom-6 lg:w-[min(35vw,24rem)] lg:px-6">
         <div>
           <p class="font-chakra text-sm font-semibold uppercase tracking-[0.12em] text-bone">{{ activeSlide.productName }}</p>
           <p class="mt-2 text-sm text-white/48">{{ activeSlide.color }}</p>

@@ -66,7 +66,7 @@ useHead({
         </section>
       </div>
 
-      <div class="space-y-5">
+      <div class="space-y-5 sm:flex lg:block sm:justify-center">
         <LaunchOfferStrip :offers="launchConfig.launchOffers" />
         <div class="flex items-center justify-between gap-4 sm:hidden">
           <SocialLinks :links="launchConfig.social" compact />
