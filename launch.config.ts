@@ -53,7 +53,7 @@ export interface LaunchConfig {
 }
 
 const launchConfig: LaunchConfig = {
-  launchDate: '2026-08-14T00:00:00+07:00',
+  launchDate: '2026-08-14T09:00:00+07:00',
   hijriDate: '1 Rabiul Awal 1448 H',
   gregorianDate: '14 Agustus 2026',
   label: 'LAUNCHING SOON',
@@ -104,31 +104,31 @@ const launchConfig: LaunchConfig = {
   ],
   heroSlides: [
     {
-      id: 'performance-legging-front',
+      id: 'prosport-legging',
       productName: 'Prosport Legging',
       color: 'Black',
       collectionLabel: 'Values Performance Kit',
       backgroundWord: 'Values',
-      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/prosport-legging.svg?updatedAt=1785488941936',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Launching/PROSSS_SPORTZ.png?updatedAt=1785894321878',
       alt: 'Black performance legging front view',
     },
     {
-      id: 'running-tee',
+      id: 'udel-off-legging',
       productName: 'Udel Off Legging',
       color: 'Black',
       collectionLabel: 'Purpose Built Essentials',
       backgroundWord: 'Purpose',
-      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/udel-off.svg?updatedAt=1785488941954',
-      alt: 'Minimal black running tee concept product',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Launching/UDELLL_OFZ.png?updatedAt=1785894322427',
+      alt: 'Covered udel legging front view',
     },
     {
-      id: 'running-shorts',
-      productName: 'Basic 3/4 Legging',
+      id: 'flex-pocket-legging',
+      productName: 'Flex Pocket Legging',
       color: 'Black',
       collectionLabel: 'Discipline In Motion',
       backgroundWord: 'Movement',
-      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Products/3per4-legging.svg?updatedAt=1785488941923',
-      alt: 'Black technical running shorts concept product',
+      image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Launching/POCEKKKTS.png?updatedAt=1785894322408',
+      alt: 'Black technical flex pocket legging concept product',
     },
   ],
 };
