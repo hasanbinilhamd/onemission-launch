@@ -41,7 +41,7 @@ useHead({
         </div>
       </header>
 
-      <div class="grid flex-1 items-center gap-8 lg:gap-0 py-10 lg:grid-cols-[46fr_54fr] lg:py-[clamp(0.75rem,1.4vh,1.25rem)]">
+      <div class="grid flex-1 items-center gap-0 py-10 lg:grid-cols-[46fr_54fr] lg:py-[clamp(0.75rem,1.4vh,1.25rem)]">
         <section class="max-w-[43rem] space-y-5 lg:pt-[clamp(0.5rem,1.2vh,1rem)]">
           <!-- <div class="inline-flex items-center gap-3 rounded-2xl border border-[#E5E4E2]/[0.16] bg-[#E5E4E2]/[0.065] px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-sm lg:px-4 lg:py-2.5">
             <span class="h-1.5 w-1.5 rounded-full bg-bone shadow-[0_0_14px_rgba(255,255,255,0.9)]" />

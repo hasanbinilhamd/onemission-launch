@@ -221,7 +221,7 @@ onBeforeUnmount(stopAutoplay);
       </div>
 
       <div class="relative z-[30] h-full w-full lg:hidden rounded-[1.6rem]">
-        <div class="relative mx-auto h-full max-w-[25rem] overflow-hidden rounded-[1.6rem] bg-transparent sm:max-w-[28rem] px-10 pb-12 pt-6">
+        <div class="relative mx-auto h-full max-w-[25rem] overflow-hidden rounded-[1.6rem] bg-transparent sm:max-w-[28rem]">
           <div class="absolute inset-0" />
           <img
             :src="activeSlide.image"
@@ -229,7 +229,7 @@ onBeforeUnmount(stopAutoplay);
             width="900"
             height="1100"
             fetchpriority="high"
-            class="relative z-[2] h-full w-full drop-shadow-[0_42px_56px_rgba(0,0,0,0.46)] object-cover"
+            class="relative z-[2] h-full w-full drop-shadow-[0_42px_56px_rgba(0,0,0,0.46)] object-contain opacity-90"
             draggable="false"
           >
         </div>
@@ -242,9 +242,9 @@ onBeforeUnmount(stopAutoplay);
         </div>
         <div class="text-right">
           <p class="font-display text-lg tracking-[0.12em] text-bone/90">{{ String(activeIndex + 1).padStart(2, '0') }} / {{ String(carouselSlides.length).padStart(2, '0') }}</p>
-          <div class="mt-3 flex justify-end gap-1">
+          <!-- <div class="mt-3 flex justify-end gap-1">
             <span v-for="slide in carouselSlides" :key="slide.id" class="h-px w-7 bg-white/25" :class="slide.id === activeSlide.id ? 'bg-bone' : ''" />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
