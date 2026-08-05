@@ -65,7 +65,7 @@ const launchConfig: LaunchConfig = {
   notifyCaption: 'Released in limited quantities. Make sure you\'re first to know.',
   notifyPlaceholder: 'Masukkan nomor wa kamu',
   contactEmail: 'onemissionid@gmail.com',
-  headerTagline: 'Valuse Matter',
+  headerTagline: 'Values Matter',
   canonicalUrl: 'https://onemissionclo.com/',
   seo: {
     title: 'ONEMISSION — Values Matter',
