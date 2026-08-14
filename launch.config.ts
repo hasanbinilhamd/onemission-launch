@@ -53,7 +53,7 @@ export interface LaunchConfig {
 }
 
 const launchConfig: LaunchConfig = {
-  launchDate: '2026-08-14T16:00:00+07:00',
+  launchDate: '2026-08-14T17:00:00+07:00',
   hijriDate: '1 Rabiul Awal 1448 H',
   gregorianDate: '14 Agustus 2026',
   label: 'LAUNCHING SOON',
