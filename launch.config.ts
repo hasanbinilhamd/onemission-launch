@@ -85,7 +85,7 @@ const launchConfig: LaunchConfig = {
   launchOffers: [
     {
       title: 'Exclusive Launch Offer',
-      description: 'Diskon spesial & gratis ongkir untuk pembelian pertama',
+      description: 'Diskon spesial & potongan ongkir untuk pembelian pertama',
       image: 'https://ik.imagekit.io/edyl3oplm/Onemission/Logos/LOGO_ONEMISSION_3D.png?updatedAt=1785488961848',
       alt: 'Exclusive launch offer preview',
     },
